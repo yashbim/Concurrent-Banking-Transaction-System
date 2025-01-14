@@ -21,11 +21,16 @@ public class BankAccount {
         return accountBalance;
     }
 
-    public void deposit(double amount){}
-    public void withdraw(double amount){}
-    public void transfer(double amount){}
-    public void lock(){}
-    public void unlock(){}
+    public void deposit(double amount){} //complete function later
+    public void withdraw(double amount){} //complete function later
+    public void transfer(double amount){} //complete function later
+
+    public void lock(){
+        reentrantLock.lock();
+    }
+    public void unlock(){
+        reentrantLock.unlock();
+    }
 
 }
 
