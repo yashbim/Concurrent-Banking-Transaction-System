@@ -13,5 +13,19 @@ public class BankAccount {
         this.reentrantLock = new ReentrantLock();
     }
 
+    public int getID(){
+        return accountID;
+    }
+
+    public double getBalance(){
+        return accountBalance;
+    }
+
+    public void deposit(double amount){}
+    public void withdraw(double amount){}
+    public void transfer(double amount){}
+    public void lock(){}
+    public void unlock(){}
+
 }
 
