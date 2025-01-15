@@ -11,9 +11,9 @@ public class Main {
 
         //creating bank accounts
 
-        List<BankAccount> bankAccounts = Arrays.asList();
-            new BankAccount(1, 100000);
-            new BankAccount(2, 50000);
-            new BankAccount(3, 25000);
+        List<BankAccount> bankAccounts = Arrays.asList(
+            new BankAccount(1, 100000),
+            new BankAccount(2, 50000),
+            new BankAccount(3, 25000));
     }
 }
