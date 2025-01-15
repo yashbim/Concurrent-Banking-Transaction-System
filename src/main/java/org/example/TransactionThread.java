@@ -18,6 +18,11 @@ public class TransactionThread implements Runnable{
         //success to conduct transaction
         boolean success = transactionSystem.transferMoney(account1_ID, account2_ID, amount);
 
+        System.out.println("Thread " + Thread.currentThread().getName() +
+                " transferring " + amount +
+                " from " + account1_ID +
+                " to " + account2_ID);
+
         if (success){
                 System.out.println("Thread " + Thread.currentThread().getName() +
                 " successfully transfered " + amount +
