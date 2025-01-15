@@ -29,12 +29,18 @@ public class TransactionSystem {
         try{
             lock1.lock();
             lock2.lock();
+
+            if (account1.getAccountBalance() >= amount){
+                account1.withdrawMoney(amount);
+                account2.depositMoney(amount);
+                return true;
+            }
+            return false;
+
         } finally {
             lock1.unlock();
             lock2.unlock();
         }
-
-        return true;
     }
 
 }
