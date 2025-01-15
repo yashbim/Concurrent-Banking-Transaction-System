@@ -43,4 +43,10 @@ public class TransactionSystem {
         }
     }
 
+    public void printAccounts(){
+        for (BankAccount account: accounts.values()){
+            System.out.println("Account ID: " + account.getAccountID() + " Account Balance: " + account.getAccountBalance());
+        }
+    }
+
 }
