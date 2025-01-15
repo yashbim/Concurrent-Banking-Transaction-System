@@ -11,6 +11,7 @@ public class TransactionSystem {
     public TransactionSystem(List<BankAccount> accountList){
         accounts = new HashMap<>();
         for(BankAccount account: accountList){
+            accounts.put(account.getAccountID(), account);
         }
     }
 

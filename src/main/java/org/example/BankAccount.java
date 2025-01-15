@@ -13,7 +13,7 @@ public class BankAccount {
         this.reentrantLock = new ReentrantLock();
     }
 
-    public int getAccountIDID(){
+    public int getAccountID(){
         return accountID;
     }
 
