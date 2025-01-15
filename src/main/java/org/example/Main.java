@@ -26,7 +26,7 @@ public class Main {
 
         // print initial account details
 
-        System.out.println("Initial Account Details:");
+        System.out.println("\n Initial Account Details:");
         transactionSystem.printAccounts();
 
         // start
@@ -46,7 +46,7 @@ public class Main {
 
         // print account details after running
 
-        System.out.println("Initial Account Details:");
+        System.out.println("\nInitial Account Details:");
         transactionSystem.printAccounts();
 
     }
