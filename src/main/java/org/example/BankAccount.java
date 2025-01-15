@@ -13,17 +13,17 @@ public class BankAccount {
         this.reentrantLock = new ReentrantLock();
     }
 
-    public int getID(){
+    public int getAccountIDID(){
         return accountID;
     }
 
-    public double getBalance(){
+    public double getAccountBalance(){
         return accountBalance;
     }
 
-    public void deposit(double amount){} //complete function later
-    public void withdraw(double amount){} //complete function later
-    public void transfer(double amount){} //complete function later
+    public void depositMoney(double amount){} //complete function later
+    public void withdrawMoney(double amount){} //complete function later
+    public void transferMoney(double amount){} //complete function later
 
     public void lock(){
         reentrantLock.lock();
