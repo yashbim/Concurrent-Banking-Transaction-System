@@ -15,5 +15,8 @@ public class Main {
             new BankAccount(1, 100000),
             new BankAccount(2, 50000),
             new BankAccount(3, 25000));
+
+        // initializing transaction systems
+        TransactionSystem transactionSystem = new TransactionSystem(bankAccounts);
     }
 }
