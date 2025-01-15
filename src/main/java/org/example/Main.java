@@ -18,5 +18,12 @@ public class Main {
 
         // initializing transaction systems
         TransactionSystem transactionSystem = new TransactionSystem(bankAccounts);
+
+        //Transaction threads
+        Thread t1 = new Thread(new TransactionThread(transactionSystem, 1, 2, 10000));
+        Thread t2 = new Thread(new TransactionThread(transactionSystem, 2, 3, 20000));
+        Thread t3 = new Thread(new TransactionThread(transactionSystem, 3, 1, 5000));
+
+        
     }
 }
