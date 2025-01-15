@@ -49,8 +49,5 @@ public class TransactionSystem {
         }
     }
 
-    public void reverseTransfer(int account1_ID, int account2_ID, double amount){
-        transferMoney(account2_ID, account1_ID, amount);
-    }
 
 }

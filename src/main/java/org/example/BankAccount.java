@@ -28,7 +28,6 @@ public class BankAccount {
     public void withdrawMoney(double amount){
         accountBalance -= amount;
     }
-    public void transferMoney(double amount){} //complete function later
 
     public void lock(){
         reentrantLock.lock();
