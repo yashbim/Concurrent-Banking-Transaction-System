@@ -1,5 +1,6 @@
 package org.example;
 
+import java.nio.FloatBuffer;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -24,6 +25,14 @@ public class TransactionSystem {
         // Locking Accounts based on order
         BankAccount lock1 = account1_ID < account2_ID ? account1 : account2;
         BankAccount lock2 = account1_ID < account2_ID ? account2 : account1;
+
+        try{
+            lock1.lock();
+            lock2.lock();
+        } finally {
+            lock1.unlock();
+            lock2.unlock();
+        }
 
         return true;
     }
