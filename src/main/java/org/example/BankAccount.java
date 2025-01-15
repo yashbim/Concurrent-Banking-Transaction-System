@@ -21,8 +21,13 @@ public class BankAccount {
         return accountBalance;
     }
 
-    public void depositMoney(double amount){} //complete function later
-    public void withdrawMoney(double amount){} //complete function later
+    public void depositMoney(double amount){
+        accountBalance += amount;
+    }
+    
+    public void withdrawMoney(double amount){
+        accountBalance -= amount;
+    }
     public void transferMoney(double amount){} //complete function later
 
     public void lock(){
