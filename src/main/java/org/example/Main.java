@@ -25,8 +25,15 @@ public class Main {
         Thread t3 = new Thread(new TransactionThread(transactionSystem, 3, 1, 5000));
 
         // print initial account details
+        
         System.out.println("Initial Account Details:");
         transactionSystem.printAccounts();
+
+        // start
+
+        t1.start();
+        t2.start();
+        t3.start();
 
     }
 }
