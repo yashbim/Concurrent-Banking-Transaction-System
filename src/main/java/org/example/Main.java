@@ -35,6 +35,15 @@ public class Main {
         t2.start();
         t3.start();
 
+        // add join functions
+        try {
+            t1.join();
+            t2.join();
+            t3.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         // print account details after running
 
         System.out.println("Initial Account Details:");
