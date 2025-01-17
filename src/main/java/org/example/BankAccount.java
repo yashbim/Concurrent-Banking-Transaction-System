@@ -3,37 +3,38 @@ package org.example;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class BankAccount {
-    private int accountID;
-    private double accountBalance;
-    private ReentrantLock reentrantLock;
+    private int id;
+    private double balance;
+    private ReentrantLock lock;
 
-    public BankAccount(int accountID, double balance) {
-        this.accountID = accountID;
-        this.accountBalance = balance;
-        this.reentrantLock = new ReentrantLock();
+    public BankAccount(int id, double balance) {
+        this.id = id;
+        this.balance = balance;
+        this.lock = new ReentrantLock();
     }
 
-    public int getAccountID(){
-        return accountID;
+    public int getId(){
+        return id;
     }
 
-    public double getAccountBalance(){
-        return accountBalance;
+    public double getBalance(){
+        return balance;
     }
 
     public void depositMoney(double amount){
-        accountBalance += amount;
+        balance += amount;
     }
     
     public void withdrawMoney(double amount){
-        accountBalance -= amount;
+        balance -= amount;
     }
 
     public void lock(){
-        reentrantLock.lock();
+        lock.lock();
     }
+
     public void unlock(){
-        reentrantLock.unlock();
+        lock.unlock();
     }
 
 }

@@ -1,8 +1,6 @@
 package org.example;
 
-import java.nio.FloatBuffer;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -13,7 +11,7 @@ public class TransactionSystem {
     public TransactionSystem(List<BankAccount> accountList){
         accounts = new HashMap<>();
         for(BankAccount account: accountList){
-            accounts.put(account.getAccountID(), account);
+            accounts.put(account.getId(), account);
         }
     }
 
@@ -30,7 +28,7 @@ public class TransactionSystem {
             lock1.lock();
             lock2.lock();
 
-            if (account1.getAccountBalance() >= amount){
+            if (account1.getBalance() >= amount){
                 account1.withdrawMoney(amount);
                 account2.depositMoney(amount);
                 return true;
@@ -45,7 +43,7 @@ public class TransactionSystem {
 
     public void printAccounts(){
         for (BankAccount account: accounts.values()){
-            System.out.println("Account ID: " + account.getAccountID() + " Account Balance: " + account.getAccountBalance());
+            System.out.println("Account ID: " + account.getId() + " Account Balance: " + account.getBalance());
         }
     }
 
