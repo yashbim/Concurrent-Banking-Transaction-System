@@ -47,5 +47,9 @@ public class TransactionSystem {
         }
     }
 
+    public void rollbackTransaction(int account1_ID, int account2_ID, double amount){
+        transferMoney(account1_ID, account2_ID, amount);
+    }
+
 
 }

@@ -49,5 +49,13 @@ public class Main {
         System.out.println("\nFinal Account Details:");
         transactionSystem.printAccounts();
 
+        System.out.println("Reversing transactions");
+
+        //transaction 1
+        transactionSystem.rollbackTransaction(2,1,10000);
+        transactionSystem.rollbackTransaction(3,2,20000);
+        transactionSystem.rollbackTransaction(1,3,5000);
+        transactionSystem.printAccounts();
+
     }
 }
