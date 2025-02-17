@@ -16,7 +16,7 @@ public class TransactionSystem {
     }
 
     //account 1 will transfer money to account 2
-    public boolean transferMoney(int  account1_ID, int account2_ID, double amount){
+    public synchronized boolean transferMoney(int  account1_ID, int account2_ID, double amount){
         BankAccount account1 = accounts.get(account1_ID);
         BankAccount account2 = accounts.get(account2_ID);
 

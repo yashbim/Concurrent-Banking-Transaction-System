@@ -5,9 +5,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Main {
+public class  Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
 
         //creating bank accounts
 
@@ -50,8 +49,6 @@ public class Main {
         transactionSystem.printAccounts();
 
         System.out.println("Reversing transactions");
-
-        //transaction 1
         transactionSystem.rollbackTransaction(2,1,10000);
         transactionSystem.rollbackTransaction(3,2,20000);
         transactionSystem.rollbackTransaction(1,3,5000);
